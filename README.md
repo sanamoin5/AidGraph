@@ -11,12 +11,16 @@ aidgraph/
     models/             # GNN and RL model definitions
     api/                # FastAPI application and route modules
         routes/         # individual API route definitions
+    visualization/      # scripts for generating maps and plots
     tests/              # unit tests
 ```
 
 Additional top-level files include:
 
 - `requirements.txt` – Python dependencies
+- `data/` – placeholder directories for raw and processed datasets
+- `Dockerfile` – container image description
+- `docker-compose.yml` – development stack with databases
 - `LICENSE` – project license
 - `README.md` – project overview
 
@@ -38,3 +42,14 @@ Additional top-level files include:
    - Containerize and deploy the FastAPI app.
 
 This repository currently contains only the basic folder layout and placeholder files. You can fill in the details following the workflow described above.
+
+## Docker Setup
+
+The repository provides a `Dockerfile` and `docker-compose.yml` for running the stack locally. Build and start the services with:
+
+```bash
+docker compose build
+docker compose up
+```
+
+The API will be available at `http://localhost:8000`.
